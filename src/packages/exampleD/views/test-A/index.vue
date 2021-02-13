@@ -17,6 +17,6 @@
     width: 200px;
     height: 100px;
     background-color: #fff;
-    .borderPX;
+    .borderPX(border-top,1px,red);
 }
 </style>
