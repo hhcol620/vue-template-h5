@@ -2,24 +2,24 @@
 import index from './index.vue';
 
 // 导入不同的组件
-import testA from './views/${name}/index.vue';
+import testA from './views/index/index.vue';
 
 export default [
     {
-        name: '${name}',
-        path: '${router}',
+        name: 'index',
+        path: '/home/index',
         component: index,
         mata: {
             title: 'Example-out',
             content:{
-                description:'${description}'
+                description:'论坛主页'
             }
         },
-        redirect: '${router}/testA',
+        redirect: '/home/index/testA',
         children: [
             {
                 name: 'Example-insert',
-                path: '${router}/testA',
+                path: '/home/index/testA',
                 component: testA
             }
         ]

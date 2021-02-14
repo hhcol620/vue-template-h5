@@ -1,15 +1,15 @@
 <template>
-<div>
-    <div class="desc">这是内嵌的页面</div>
-</div>
+    <div>
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
-import { _exampleAPI } from '../../server/test/api.js';
 export default {
+    name: 'article-list',
     data() {
         return {};
-    }    
+    }
 };
 </script>
 <style lang="" scoped>
