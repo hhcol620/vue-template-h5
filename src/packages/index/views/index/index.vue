@@ -1,6 +1,21 @@
 <template>
-    <div>
-        <div class="desc">这是内嵌的页面</div>
+    <div class="index-container animate__animated animate__bounceInUp">
+        <header class="header">
+            <span class="plate-title">社区</span>
+            <span>今天是你在IRH社区的第&nbsp;99&nbsp;<span>DAYS</span></span>
+        </header>
+        <nav class="nav">
+            <div class="nav-item"
+                 v-for="(item,index) in navList"
+                 :key="item.label+index">
+                <svg class="svg-icon"
+                     aria-hidden="true">
+                    <use :xlink:href="item.icon"></use>
+                </svg>
+                <div class="icon-text">{{item.label}}</div>
+            </div>
+        </nav>
+        <article></article>
     </div>
 </template>
 
@@ -8,9 +23,68 @@
 import { _exampleAPI } from '../../server/api.js';
 export default {
     data() {
-        return {};
+        return {
+            navList: [
+                {
+                    label: '聊一聊',
+                    icon: '#iconliaotian'
+                },
+                {
+                    label: '每日话题',
+                    icon: '#iconshuqian'
+                },
+                {
+                    label: '推荐',
+                    icon: '#iconzixun'
+                },
+                {
+                    label: '热榜',
+                    icon: '#iconquanxuan'
+                },
+                {
+                    label: '沸点',
+                    icon: '#icondingwei'
+                }
+            ]
+        };
     }
 };
 </script>
-<style lang="" scoped>
+<style lang="less" scoped>
+.index-container {
+    padding: 0.2rem;
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 0.16rem;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 0.24rem;
+        color: #4d4d4d;
+    }
+    .plate-title {
+        color: #4d4d4d;
+        font-size: 0.36rem;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+    .nav {
+        display: flex;
+        flex-wrap: wrap;
+        .nav-item {
+            width: 20%;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .icon-text {
+                color: #4d4d4d;
+                font-size: 0.16rem;
+                font-weight: 500;
+                line-height: 1.5;
+            }
+        }
+    }
+}
 </style>
