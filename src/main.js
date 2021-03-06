@@ -14,6 +14,7 @@ import 'animate.css';
 import '@/utils/rem.js';
 // 导入vant 组件库   按需导入
 import '@/components/vant-components.js';
+// 引入字体
 import '@/assest/font/iconfont-symbol.js';
 
 // 创建vue根实例

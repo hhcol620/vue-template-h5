@@ -1,8 +1,8 @@
 <template>
     <div class="index-container animate__animated animate__bounceInUp">
         <header class="header">
-            <span class="plate-title">社区</span>
-            <span>今天是你在IRH社区的第&nbsp;99&nbsp;<span>DAYS</span></span>
+            <div class="plate-title">社区</div>
+            <div>今天是你在IRH社区的第&nbsp;99&nbsp;<span>DAYS</span></div>
         </header>
         <nav class="nav">
             <div class="nav-item"
@@ -15,7 +15,14 @@
                 <div class="icon-text">{{item.label}}</div>
             </div>
         </nav>
-        <article></article>
+        <div class="plate-title">热门话题</div>
+        <section class="topics-content">
+
+        </section>
+        <div class="plate-title">最新文章</div>
+        <section class="article-list-content">
+
+        </section>
     </div>
 </template>
 
@@ -24,6 +31,7 @@ import { _exampleAPI } from '../../server/api.js';
 export default {
     data() {
         return {
+            // 导航入口
             navList: [
                 {
                     label: '聊一聊',
@@ -52,7 +60,7 @@ export default {
 </script>
 <style lang="less" scoped>
 .index-container {
-    padding: 0.2rem;
+    padding: 0 0.2rem;
     .header {
         display: flex;
         justify-content: space-between;
@@ -68,6 +76,7 @@ export default {
         font-size: 0.36rem;
         font-weight: 600;
         line-height: 1.5;
+        padding-top: 0.2rem;
     }
     .nav {
         display: flex;
@@ -85,6 +94,18 @@ export default {
                 line-height: 1.5;
             }
         }
+    }
+    .topics-content {
+        height: 3.4rem;
+        background-color: #ffab73;
+        border-radius: 0.1rem;
+        margin-top: 0.1rem;
+    }
+    .article-list-content {
+        height: 6rem;
+        border-radius: 0.1rem;
+        margin-top: 0.1rem;
+        padding: 0.2rem;
     }
 }
 </style>
