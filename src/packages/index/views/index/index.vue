@@ -17,7 +17,7 @@
         </nav>
         <div class="plate-title">热门话题</div>
         <section class="topics-content">
-
+            <v-baberrage></v-baberrage>
         </section>
         <div class="plate-title">最新文章</div>
         <section class="article-list-content">
@@ -28,6 +28,8 @@
 
 <script>
 import { _exampleAPI } from '../../server/api.js';
+
+import baberrage from '../../components/baberrageQueue.vue';
 export default {
     data() {
         return {
@@ -55,6 +57,9 @@ export default {
                 }
             ]
         };
+    },
+    components: {
+        'v-baberrage': baberrage
     }
 };
 </script>
