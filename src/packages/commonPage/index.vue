@@ -109,7 +109,6 @@ export default {
 .navigation-menu {
     position: relative;
     height: 30px;
-    display: flex;
     .head-navigation-bar {
         padding: 0;
         margin: 0;
