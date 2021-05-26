@@ -4117,7 +4117,7 @@
   dependencies:
     "p-locate" "^5.0.0"
 
-"lodash@^4.0.0", "lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@~4.17.10":
+"lodash@^4.0.0", "lodash@^4.17.11", "lodash@^4.17.14", "lodash@^4.17.15", "lodash@^4.17.19", "lodash@^4.17.20", "lodash@^4.17.4", "lodash@~4.17.10":
   "integrity" "sha1-tEqbYpe8tpjxxRo1RaKzs2jVnFI="
   "resolved" "https://registry.npm.taobao.org/lodash/download/lodash-4.17.20.tgz?cache=0&sync_timestamp=1597336097104&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Flodash%2Fdownload%2Flodash-4.17.20.tgz"
   "version" "4.17.20"
@@ -5968,6 +5968,13 @@
     "define-property" "^0.2.5"
     "object-copy" "^0.1.0"
 
+"stats-webpack-plugin@^0.7.0":
+  "integrity" "sha512-NT0YGhwuQ0EOX+uPhhUcI6/+1Sq/pMzNuSCBVT4GbFl/ac6I/JZefBcjlECNfAb1t3GOx5dEj1Z7x0cAxeeVLQ=="
+  "resolved" "https://registry.npmjs.org/stats-webpack-plugin/-/stats-webpack-plugin-0.7.0.tgz"
+  "version" "0.7.0"
+  dependencies:
+    "lodash" "^4.17.4"
+
 "statuses@>= 1.4.0 < 2", "statuses@>= 1.5.0 < 2", "statuses@~1.5.0":
   "integrity" "sha1-Fhx9rBd2Wf2YEfQ3cfqZOBR4Yow="
   "resolved" "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
@@ -6753,7 +6760,7 @@
     "source-list-map" "^2.0.1"
     "source-map" "^0.6.1"
 
-"webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^5.11.0":
+"webpack@^4.0.0 || ^5.0.0", "webpack@^4.27.0 || ^5.0.0", "webpack@^5.11.0", "webpack@>=1.0.0":
   "integrity" "sha1-ObK52utcbGIOA7dVbsZ06u1AFrQ="
   "resolved" "https://registry.npm.taobao.org/webpack/download/webpack-5.11.1.tgz?cache=0&sync_timestamp=1609177045511&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fwebpack%2Fdownload%2Fwebpack-5.11.1.tgz"
   "version" "5.11.1"
