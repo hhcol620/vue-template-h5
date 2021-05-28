@@ -14,6 +14,8 @@ import '@/utils/rem.js';
 // 导入vant 组件库   按需导入
 import '@/components/vant-components.js';
 
+// 导入vconsole
+import '@/utils/vconsole.js';
 // 创建vue根实例
 new Vue({
     router,

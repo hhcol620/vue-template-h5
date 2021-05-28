@@ -1,6 +1,7 @@
 'use strict';
 
 const path = require('path');
+const webpack = require('webpack');
 
 // 引入vue-loader插件
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
@@ -38,6 +39,7 @@ module.exports = {
     // 插件
     plugins: [
         new VueLoaderPlugin(),
-        new FriendlyErrorsWebpackPlugin()
+        new FriendlyErrorsWebpackPlugin(),
+        new webpack.EnvironmentPlugin(require('dotenv').config().parsed)
     ]
 };
