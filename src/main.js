@@ -16,6 +16,8 @@ import '@/components/vant-components.js';
 
 // 导入vconsole
 import '@/utils/vconsole.js';
+// 导入chii
+import '@/utils/chii.js';
 // 创建vue根实例
 new Vue({
     router,

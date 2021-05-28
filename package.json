@@ -6,7 +6,8 @@
     "scripts": {
         "dev": "webpack serve --config build/webpack.dev.js",
         "build": "webpack --config build/webpack.prod.js",
-        "create-page": "node template/script.js"
+        "create-page": "node template/script.js",
+        "chii": "chii start -p 8080"
     },
     "author": "{{author}}",
     "cssExpand": "{{cssExpand}}",
@@ -25,6 +26,7 @@
         "babel-loader": "^8.2.2",
         "babel-plugin-import": "^1.13.3",
         "chalk": "^2.4.2",
+        "chii": "^0.6.7",
         "clean-webpack-plugin": "^3.0.0",
         "commander": "^6.2.1",
         "css-loader": "^5.0.1",
