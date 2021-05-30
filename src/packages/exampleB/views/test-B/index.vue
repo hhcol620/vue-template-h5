@@ -6,11 +6,11 @@
 </template>
 
 <script>
-import { _exampleAPI } from "../../services/exampleB/api.js";
+import { _exampleAPI } from '../../services/exampleB/api.js';
 export default {
     data() {
         return {
-            data: ""
+            infoData: ''
         };
     },
     created() {
@@ -20,17 +20,16 @@ export default {
         async initResponseData() {
             const res = await _exampleAPI();
             if (res.code !== 200) {
-                console.log("请求出错了");
+                console.log('请求出错了');
             }
-            this.data = res.data;
+            this.infoData = JSON.stringify(res.data);
             console.log(
-                "请求完成,返回数据是-------" + JSON.stringify(this.data)
+                '请求完成,返回数据是-------' + JSON.stringify(res.data)
             );
         }
     }
 };
 </script>
-
 
 <style scoped>
 .result-text {
