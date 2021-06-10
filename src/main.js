@@ -8,11 +8,14 @@ import App from './App.vue';
 
 // 导入global全局样式
 import '@/styles/global.less';
+import 'animate.css';
 
 // 导入屏幕宽度处理js
 import '@/utils/rem.js';
 // 导入vant 组件库   按需导入
 import '@/components/vant-components.js';
+// 引入icon
+import '@/assest/font/iconfont-symbol.js';
 
 // 导入vconsole
 import '@/utils/vconsole.js';
