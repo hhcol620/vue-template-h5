@@ -1,65 +1,69 @@
 <template>
     <div class="index-container animate__animated animate__bounceInUp">
         <header class="header">
-            <div class="plate-title">社区</div>
-            <div>今天是你在IRH社区的第&nbsp;99&nbsp;<span>DAYS</span></div>
+            <div class="plate-title">This is a app is created with this
+                <a href="https://github.com/hhcol620/create-vue-app">cva-cli</a>
+            </div>
         </header>
         <nav class="nav">
-            <div class="nav-item"
-                 v-for="(item,index) in navList"
-                 :key="item.label+index">
+            <router-link class="nav-item"
+                         v-for="(item,index) in navList"
+                         :key="item.label+index"
+                         :to="item.url">
                 <svg class="svg-icon"
                      aria-hidden="true">
                     <use :xlink:href="item.icon"></use>
                 </svg>
                 <div class="icon-text">{{item.label}}</div>
-            </div>
+            </router-link>
         </nav>
-        <div class="plate-title">热门话题</div>
-        <section class="topics-content">
-            <v-baberrage></v-baberrage>
-        </section>
-        <div class="plate-title">最新文章</div>
-        <section class="article-list-content">
-
+        <section>
+            <div class="plate-title">Example</div>
+            <div class="show-content">
+                <router-view></router-view>
+            </div>
         </section>
     </div>
 </template>
 
 <script>
-import { _exampleAPI } from '../../server/api.js';
-
-import baberrage from '../../components/baberrageQueue.vue';
 export default {
     data() {
         return {
             // 导航入口
             navList: [
                 {
-                    label: '聊一聊',
-                    icon: '#iconliaotian'
+                    label: 'GetQuery',
+                    icon: '#iconliaotian',
+                    url: '01'
                 },
                 {
-                    label: '每日话题',
-                    icon: '#iconshuqian'
+                    label: 'timeFormat',
+                    icon: '#iconshuqian',
+                    url: '02'
                 },
                 {
-                    label: '推荐',
-                    icon: '#iconzixun'
+                    label: '防抖指令',
+                    icon: '#iconzixun',
+                    url: '03'
                 },
                 {
-                    label: '热榜',
-                    icon: '#iconquanxuan'
+                    label: '封装请求',
+                    icon: '#iconquanxuan',
+                    url: '04'
                 },
                 {
-                    label: '沸点',
-                    icon: '#icondingwei'
+                    label: '全局Store',
+                    icon: '#icondingwei',
+                    url: '05'
+                },
+                {
+                    label: 'pxBorder',
+                    icon: '#iconliaotian',
+                    url: '06'
                 }
             ]
         };
-    },
-    components: {
-        'v-baberrage': baberrage
     }
 };
 </script>
@@ -100,17 +104,12 @@ export default {
             }
         }
     }
-    .topics-content {
+    .show-content {
         height: 3.4rem;
         background-color: #ffab73;
         border-radius: 0.1rem;
         margin-top: 0.1rem;
-    }
-    .article-list-content {
-        height: 6rem;
-        border-radius: 0.1rem;
-        margin-top: 0.1rem;
-        padding: 0.2rem;
+        padding: 0.1rem;
     }
 }
 </style>

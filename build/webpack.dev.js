@@ -11,7 +11,7 @@ const baseWebpackConfig = require('./webpack.common.js');
 const utils = require('./utils.js');
 const { _Proxy } = require('./devProxy.js');
 console.log(_Proxy);
-
+//
 module.exports = merge(baseWebpackConfig, {
     mode: 'development',
     devtool: 'eval-source-map',
@@ -20,14 +20,15 @@ module.exports = merge(baseWebpackConfig, {
     devServer: {
         // 自动打开浏览器
         open: true,
-        compress: true, // 启动gzip压缩
         host: utils.getNetworkIp(),
-        port: 9090,
-        contentBase: path.resolve(__dirname, '../public/index.html'),
+        port: 3000,
+        contentBase: path.resolve(__dirname, '../dist'),
         publicPath: '/',
         quiet: true,
         proxy: _Proxy,
-        overlay: true
+        overlay: true,
+        hot: true,
+        compress: true
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -41,5 +42,8 @@ module.exports = merge(baseWebpackConfig, {
             failOnWarning: false,
             failOnError: false
         })
-    ]
+    ],
+    optimization: {
+        runtimeChunk: 'single'
+    }
 });

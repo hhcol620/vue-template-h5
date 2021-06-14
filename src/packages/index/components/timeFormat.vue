@@ -1,6 +1,6 @@
 <template>
-    <div>
-        这是EA的tb---时间格式化工具
+    <div class="content">
+        时间格式化工具使用
         <p>当前时间为<span class="time-text">{{getDateNow('YY-MM-DD hh:mm:ss')}}</span></p>
         <p>当前时间为<span class="time-text">{{getDateNow('YY-MM-DD hh:mm')}}</span></p>
         <p>当前时间为<span class="time-text">{{getDateNow('YY-MM-DD')}}</span></p>
@@ -10,7 +10,7 @@
 
 
 <script>
-import { _timeFormat } from "@/utils/timeFormate.js";
+import { _timeFormat } from '@/utils/timeFormat.js';
 export default {
     data() {
         return {};
@@ -29,10 +29,13 @@ export default {
 </script>
 
 <style scoped>
+.content {
+    font-size: 0.16rem;
+}
 .time-text {
-    margin-left: 20px;
-    font-size: 16px;
-    line-height: 30px;
+    margin-left: 0.2rem;
+    font-size: 0.16rem;
+    line-height: 1.5;
     font-style: normal;
     font-weight: 500;
     color: #c56cf0;

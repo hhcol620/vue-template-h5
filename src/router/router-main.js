@@ -11,5 +11,11 @@ Vue.use(VueRouter, {});
 export default new VueRouter({
     mode: 'hash',
     base: '/',
-    routes: [..._routes]
+    routes: [
+        {
+            path: '/',
+            redirect: '/index'
+        },
+        ..._routes
+    ]
 });

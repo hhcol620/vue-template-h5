@@ -1,8 +1,7 @@
 <template>
-    <div>
-        这是EA的ta-----获取url的参数工具
-        <p>当前url地址的query为<span class="query-text">{{queryString}}</span></p>
-        <van-button type="primary">主要按钮</van-button>
+    <div class="content">
+        获取url的中参数工具
+        <p>当前url地址中的query为<span class="query-text">{{queryString}}</span></p>
     </div>
 </template>
 
@@ -30,12 +29,15 @@ export default {
 </script>
 
 <style scoped>
-.query-text {
-    font-size: 16px;
+.content {
+    font-size: 0.16rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 30px;
+    line-height: 0.3rem;
+}
+
+.query-text {
     color: #7158e2;
-    margin-left: 20px;
+    margin-left: 0.2rem;
 }
 </style>

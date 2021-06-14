@@ -1,4 +1,4 @@
-const moduleC = {
+const indexStore = {
     // 使其成为带命名空间的模块
     namespaced: true,
     state: () => ({
@@ -32,4 +32,4 @@ const moduleC = {
     }
 };
 
-export default moduleC;
+export default indexStore;

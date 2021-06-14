@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 
-import moduleC from '@/store/exampleC/index.js';
+import indexStore from '@/store/indexPage/index.js';
 
 Vue.use(Vuex);
 const store = new Vuex.Store({
@@ -10,7 +10,7 @@ const store = new Vuex.Store({
     actions: {},
     getters: {},
     modules: {
-        moduleC
+        indexStore
     }
 });
 
